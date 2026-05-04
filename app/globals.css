@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Print Styles */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  .print-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .print-question {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .print-flashcard {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 2rem;
+    border: 2px solid #8764b8;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  
+  .print-answer-section {
+    page-break-before: always;
+    margin-top: 2rem;
+  }
+  
+  .print-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #0078d4;
+  }
+}
